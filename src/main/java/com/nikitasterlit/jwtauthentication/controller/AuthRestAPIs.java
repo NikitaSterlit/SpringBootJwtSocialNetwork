@@ -16,6 +16,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -57,7 +58,8 @@ public class AuthRestAPIs {
         SecurityContextHolder.getContext().setAuthentication(authentication); // передача обьекта аутентификации
 
         String jwt = jwtProvider.generateJwtToken(authentication); // генерируем токен
-        return ResponseEntity.ok(new JwtResponse(jwt)); // отправляем токен обратно пользователю
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        return ResponseEntity.ok(new JwtResponse(jwt, userDetails.getUsername(), userDetails.getAuthorities())); // отправляем токен обратно пользователю
     }
 
     // прокомментировать/ уметь работать в Postman todo
