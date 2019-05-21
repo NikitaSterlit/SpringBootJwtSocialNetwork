@@ -18,10 +18,10 @@
       <Current>1</Current>
       <Visible>1</Visible>
       <Relations>sequence|table|46006|46008|1
+sequence|table|45960|45962|1
 sequence|table|46019|46021|1
 sequence|table|45923|45925|1
 sequence|table|45931|45933|1
-sequence|table|45960|45962|1
 </Relations>
     </database>
     <database id="4" parent="1" name="test">

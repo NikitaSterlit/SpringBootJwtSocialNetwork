@@ -11,12 +11,12 @@
       <IntrospectionStateNumber>567</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
-      <Relations>sequence|table|47925|47927|1
+      <Relations>sequence|table|47981|47983|1
 sequence|table|47938|47940|1
 sequence|table|47949|47951|1
 sequence|table|47957|47959|1
 sequence|table|47965|47967|1
-sequence|table|47981|47983|1
+sequence|table|47925|47927|1
 </Relations>
     </database>
     <database id="3" parent="1" name="MyBase">
